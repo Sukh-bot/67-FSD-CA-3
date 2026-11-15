@@ -1,0 +1,44 @@
+[
+  {
+    "id": "APT-3001",
+    "petName": "Rusty",
+    "species": "Dog",
+    "breed": "Cocker Spaniel",
+    "ownerName": "Meera Nambiar",
+    "ownerPhone": "9820011223",
+    "ownerEmail": "meera.n@example.com",
+    "appointmentDate": "2026-11-20T10:00:00Z",
+    "service": "General Checkup",
+    "status": "Confirmed",
+    "notes": "Routine physical checkup and ear swab test.",
+    "createdAt": "2026-11-15T09:00:00Z"
+  },
+  {
+    "id": "APT-3002",
+    "petName": "Snowy",
+    "species": "Cat",
+    "breed": "British Shorthair",
+    "ownerName": "Tanya Saxena",
+    "ownerPhone": "9833445566",
+    "ownerEmail": "tanya.s@example.com",
+    "appointmentDate": "2026-11-21T14:30:00Z",
+    "service": "Vaccination",
+    "status": "Scheduled",
+    "notes": "Feline leukemia vaccine and flea treatment.",
+    "createdAt": "2026-11-15T09:30:00Z"
+  },
+  {
+    "id": "APT-3003",
+    "petName": "Bruno",
+    "species": "Dog",
+    "breed": "Rottweiler",
+    "ownerName": "Rajesh Nair",
+    "ownerPhone": "9819876543",
+    "ownerEmail": "rajesh.n@example.com",
+    "appointmentDate": "2026-11-19T11:00:00Z",
+    "service": "Surgery Consultation",
+    "status": "In Progress",
+    "notes": "Consultation for abdominal ultrasound and dental extraction.",
+    "createdAt": "2026-11-15T10:00:00Z"
+  }
+]

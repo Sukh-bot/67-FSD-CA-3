@@ -1,0 +1,28 @@
+services:
+  # Express.js REST API Web Service on Render
+  - type: web
+    name: petcare-backend-api
+    env: node
+    plan: free
+    region: frankfurt
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: JWT_SECRET
+        generateValue: true
+      - key: DATABASE_URL
+        fromDatabase:
+          name: petcare-postgres-db
+          property: connectionString
+
+databases:
+  # Managed PostgreSQL Database on Render
+  - name: petcare-postgres-db
+    plan: free
+    region: frankfurt
+    databaseName: petcare_db
+    user: petcare_admin

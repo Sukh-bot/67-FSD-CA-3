@@ -1,0 +1,29 @@
+# Node.js dependencies
+node_modules/
+*/node_modules/
+*/*/node_modules/
+
+# Build outputs
+dist/
+*/dist/
+*/*/dist/
+build/
+
+# Environment Variables
+.env
+*/.env
+*/*/.env
+!.env.example
+!*/.env.example
+!*/*/.env.example
+
+# Runtime databases & logs
+*.log
+*/data/audit.log
+database.sqlite
+*/database.sqlite
+*/*/database.sqlite
+
+# OS generated files
+.DS_Store
+Thumbs.db

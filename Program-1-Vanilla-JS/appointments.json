@@ -1,0 +1,72 @@
+[
+  {
+    "id": "APT-1001",
+    "petName": "Milo",
+    "species": "Dog",
+    "breed": "Golden Retriever",
+    "ownerName": "Rohan Sharma",
+    "ownerPhone": "9876543210",
+    "ownerEmail": "rohan.sharma@example.com",
+    "appointmentDate": "2026-11-20T10:30",
+    "service": "Vaccination",
+    "status": "Confirmed",
+    "notes": "Annual rabies booster and deworming.",
+    "createdAt": "2026-11-15T09:00:00Z"
+  },
+  {
+    "id": "APT-1002",
+    "petName": "Luna",
+    "species": "Cat",
+    "breed": "Persian",
+    "ownerName": "Pooja Kulkarni",
+    "ownerPhone": "9823456789",
+    "ownerEmail": "pooja.k@example.com",
+    "appointmentDate": "2026-11-21T14:00",
+    "service": "Grooming & Spa",
+    "status": "Scheduled",
+    "notes": "Full coat trim and claw clipping.",
+    "createdAt": "2026-11-15T09:30:00Z"
+  },
+  {
+    "id": "APT-1003",
+    "petName": "Charlie",
+    "species": "Dog",
+    "breed": "Beagle",
+    "ownerName": "Amit Deshmukh",
+    "ownerPhone": "9811223344",
+    "ownerEmail": "amit.d@example.com",
+    "appointmentDate": "2026-11-18T11:15",
+    "service": "General Checkup",
+    "status": "In Progress",
+    "notes": "Slight limp on front left paw after running.",
+    "createdAt": "2026-11-15T10:00:00Z"
+  },
+  {
+    "id": "APT-1004",
+    "petName": "Kiwi",
+    "species": "Bird",
+    "breed": "Cockatiel",
+    "ownerName": "Sneha Patil",
+    "ownerPhone": "9765432100",
+    "ownerEmail": "sneha.patil@example.com",
+    "appointmentDate": "2026-11-19T16:45",
+    "service": "General Checkup",
+    "status": "Completed",
+    "notes": "Routine beak and feather health examination.",
+    "createdAt": "2026-11-14T11:20:00Z"
+  },
+  {
+    "id": "APT-1005",
+    "petName": "Coco",
+    "species": "Rabbit",
+    "breed": "Holland Lop",
+    "ownerName": "Vikas Joshi",
+    "ownerPhone": "9988776655",
+    "ownerEmail": "vikas.j@example.com",
+    "appointmentDate": "2026-11-22T09:30",
+    "service": "Dental Cleaning",
+    "status": "Scheduled",
+    "notes": "Incisor overgrown, needs veterinary trimming.",
+    "createdAt": "2026-11-15T10:45:00Z"
+  }
+]

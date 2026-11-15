@@ -1,0 +1,15 @@
+{
+  "buildCommand": "cd Program-5-FullStack-Integration/frontend && npm install && npm run build",
+  "outputDirectory": "Program-5-FullStack-Integration/frontend/dist",
+  "framework": "vite",
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://petcare-backend-api.onrender.com/api/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/Program-5-FullStack-Integration/frontend/dist/index.html"
+    }
+  ]
+}

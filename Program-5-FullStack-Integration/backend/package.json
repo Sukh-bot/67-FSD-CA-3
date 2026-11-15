@@ -1,0 +1,23 @@
+{
+  "name": "program-5-backend-integrated",
+  "version": "1.0.0",
+  "description": "Express Backend with Sequelize ORM for PostgreSQL / SQLite",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node seeders/seedData.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.12.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.3",
+    "sqlite3": "^5.1.7"
+  },
+  "author": "sukhada bhave (Roll 67)",
+  "license": "ISC"
+}

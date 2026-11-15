@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paws & Claws Veterinary Care | Appointment Portal</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Academic Header Banner -->
+  <header class="academic-banner">
+    <div class="container banner-content">
+      <div class="banner-badge">FSD Continuous Assessment (CA-3) | Program 1</div>
+      <div class="student-info">
+        <span><strong>Student:</strong> sukhada bhave</span>
+        <span class="divider">|</span>
+        <span><strong>Roll No:</strong> 67</span>
+        <span class="divider">|</span>
+        <span><strong>Course:</strong> B.E. AI & DS (Sem V)</span>
+        <span class="divider">|</span>
+        <span class="co-badge">CO1 & CO2</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Application Navigation -->
+  <nav class="navbar">
+    <div class="container nav-content">
+      <div class="logo">
+        <span class="logo-icon">🐾</span>
+        <div>
+          <h1>Paws & Claws</h1>
+          <p class="tagline">Veterinary Hospital & Pet Care Appointment Management</p>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <button id="btnReloadMock" class="btn btn-outline" title="Reload sample appointments via Fetch API">
+          🔄 Refresh via Fetch API
+        </button>
+        <a href="#booking-section" class="btn btn-primary">+ Book Appointment</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container main-content">
+
+    <!-- KPI Statistics Counters -->
+    <section class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon">📅</div>
+        <div class="stat-details">
+          <span class="stat-value" id="statTotal">0</span>
+          <span class="stat-label">Total Appointments</span>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon icon-scheduled">⏳</div>
+        <div class="stat-details">
+          <span class="stat-value" id="statScheduled">0</span>
+          <span class="stat-label">Scheduled</span>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon icon-confirmed">✅</div>
+        <div class="stat-details">
+          <span class="stat-value" id="statConfirmed">0</span>
+          <span class="stat-label">Confirmed</span>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon icon-completed">🎉</div>
+        <div class="stat-details">
+          <span class="stat-value" id="statCompleted">0</span>
+          <span class="stat-label">Completed</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Workspace Split: Booking Form & Appointments Listing -->
+    <div class="layout-grid">
+
+      <!-- Left Column: Booking Form -->
+      <section class="card form-card" id="booking-section">
+        <div class="card-header">
+          <h2>📋 Book Pet Care Appointment</h2>
+          <p class="section-subtext">Fill in the details below to schedule a visit with our veterinary experts.</p>
+        </div>
+
+        <form id="appointmentForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="petName">Pet Name <span class="required">*</span></label>
+              <input type="text" id="petName" name="petName" placeholder="e.g. Milo" required minlength="2">
+              <span class="error-msg" id="petNameError"></span>
+            </div>
+            <div class="form-group">
+              <label for="species">Species <span class="required">*</span></label>
+              <select id="species" name="species" required>
+                <option value="">Select Species</option>
+                <option value="Dog">Dog 🐶</option>
+                <option value="Cat">Cat 🐱</option>
+                <option value="Bird">Bird 🦜</option>
+                <option value="Rabbit">Rabbit 🐰</option>
+                <option value="Reptile">Reptile 🦎</option>
+                <option value="Other">Other 🐾</option>
+              </select>
+              <span class="error-msg" id="speciesError"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="breed">Breed</label>
+              <input type="text" id="breed" name="breed" placeholder="e.g. Golden Retriever">
+              <span class="error-msg" id="breedError"></span>
+            </div>
+            <div class="form-group">
+              <label for="ownerName">Owner Name <span class="required">*</span></label>
+              <input type="text" id="ownerName" name="ownerName" placeholder="e.g. Rohan Sharma" required minlength="2">
+              <span class="error-msg" id="ownerNameError"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="ownerPhone">Phone Number <span class="required">*</span></label>
+              <input type="tel" id="ownerPhone" name="ownerPhone" placeholder="10-digit Mobile (e.g. 9876543210)" required>
+              <span class="error-msg" id="ownerPhoneError"></span>
+            </div>
+            <div class="form-group">
+              <label for="ownerEmail">Email Address <span class="required">*</span></label>
+              <input type="email" id="ownerEmail" name="ownerEmail" placeholder="e.g. rohan@example.com" required>
+              <span class="error-msg" id="ownerEmailError"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="appointmentDate">Appointment Date & Time <span class="required">*</span></label>
+              <input type="datetime-local" id="appointmentDate" name="appointmentDate" required>
+              <span class="error-msg" id="appointmentDateError"></span>
+            </div>
+            <div class="form-group">
+              <label for="service">Service Type <span class="required">*</span></label>
+              <select id="service" name="service" required>
+                <option value="">Select Service</option>
+                <option value="General Checkup">General Health Checkup 🩺</option>
+                <option value="Vaccination">Vaccination & Deworming 💉</option>
+                <option value="Grooming & Spa">Grooming & Spa Bath ✂️</option>
+                <option value="Dental Cleaning">Dental Cleaning & Scaling 🦷</option>
+                <option value="Surgery Consultation">Surgery Consultation 🏥</option>
+                <option value="Emergency Care">Emergency First Aid 🚨</option>
+              </select>
+              <span class="error-msg" id="serviceError"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="notes">Special Health Notes / Symptoms</label>
+            <textarea id="notes" name="notes" rows="3" placeholder="Describe symptoms, dietary needs, or past medical history..."></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" id="submitBtn" class="btn btn-primary btn-block">
+              📅 Confirm & Book Appointment
+            </button>
+            <button type="reset" id="resetBtn" class="btn btn-secondary">
+              Reset Form
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Right Column: Filter, Search, and Appointment Cards -->
+      <section class="card list-card">
+        <div class="card-header list-header">
+          <div>
+            <h2>📑 Scheduled Appointments</h2>
+            <p class="section-subtext">Manage patient bookings, update consultation status, or sort records.</p>
+          </div>
+          <span class="badge badge-counter" id="recordCount">0 Records</span>
+        </div>
+
+        <!-- Filter & Search Toolbar -->
+        <div class="toolbar">
+          <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="searchInput" placeholder="Search by pet name, owner, or breed...">
+          </div>
+
+          <div class="filters-row">
+            <div class="filter-item">
+              <label for="filterStatus">Status:</label>
+              <select id="filterStatus">
+                <option value="ALL">All Statuses</option>
+                <option value="Scheduled">Scheduled</option>
+                <option value="Confirmed">Confirmed</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Completed">Completed</option>
+                <option value="Cancelled">Cancelled</option>
+              </select>
+            </div>
+
+            <div class="filter-item">
+              <label for="filterService">Service:</label>
+              <select id="filterService">
+                <option value="ALL">All Services</option>
+                <option value="General Checkup">General Checkup</option>
+                <option value="Vaccination">Vaccination</option>
+                <option value="Grooming & Spa">Grooming & Spa</option>
+                <option value="Dental Cleaning">Dental Cleaning</option>
+                <option value="Surgery Consultation">Surgery</option>
+                <option value="Emergency Care">Emergency</option>
+              </select>
+            </div>
+
+            <div class="filter-item">
+              <label for="sortBy">Sort By:</label>
+              <select id="sortBy">
+                <option value="date-asc">Date (Earliest First)</option>
+                <option value="date-desc">Date (Latest First)</option>
+                <option value="name-asc">Pet Name (A-Z)</option>
+                <option value="name-desc">Pet Name (Z-A)</option>
+                <option value="status">Status</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Appointment Cards Container -->
+        <div id="appointmentsContainer" class="appointments-list">
+          <!-- Dynamically populated via DOM manipulation -->
+          <div class="loading-state">
+            <div class="spinner"></div>
+            <p>Fetching appointments using Fetch API...</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Live HTTP Network & JSON Request/Response Inspector -->
+    <section class="card console-card">
+      <div class="console-header">
+        <div class="console-title">
+          <span class="live-dot"></span>
+          <h3>Live HTTP Network Activity & JSON Data Inspector</h3>
+        </div>
+        <span class="console-desc">Demonstrates Fetch API methods (GET, POST, PUT, DELETE) and JSON payloads</span>
+      </div>
+      <div class="console-body" id="networkLogConsole">
+        <div class="log-entry">
+          <span class="log-time">[Init]</span>
+          <span class="log-method log-get">GET</span>
+          <span class="log-url">/appointments.json</span>
+          <span class="log-status">200 OK</span>
+          <span class="log-summary">Ready to intercept client-side HTTP operations</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Toast Notification Container -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- Edit Appointment Modal -->
+  <div id="editModal" class="modal-overlay hidden">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3>✏️ Edit Appointment Status & Details</h3>
+        <button id="closeModalBtn" class="close-btn">&times;</button>
+      </div>
+      <form id="editForm">
+        <input type="hidden" id="editAptId">
+        <div class="form-group">
+          <label for="editPetName">Pet Name</label>
+          <input type="text" id="editPetName" disabled>
+        </div>
+        <div class="form-group">
+          <label for="editStatus">Consultation Status <span class="required">*</span></label>
+          <select id="editStatus" required>
+            <option value="Scheduled">Scheduled</option>
+            <option value="Confirmed">Confirmed</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Completed">Completed</option>
+            <option value="Cancelled">Cancelled</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="editDate">Date & Time <span class="required">*</span></label>
+          <input type="datetime-local" id="editDate" required>
+        </div>
+        <div class="form-group">
+          <label for="editNotes">Doctor's Clinical Notes</label>
+          <textarea id="editNotes" rows="3"></textarea>
+        </div>
+        <div class="modal-actions">
+          <button type="button" id="cancelModalBtn" class="btn btn-secondary">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Changes (HTTP PUT)</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Paws & Claws Veterinary Care. FSD Practical CA-3 Submission.</p>
+      <p>Submitted by <strong>sukhada bhave</strong> (Roll No. 67) | Department of Artificial Intelligence & Data Science</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

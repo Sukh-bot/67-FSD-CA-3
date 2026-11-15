@@ -1,0 +1,12 @@
+{
+  "name": "program-3-node-core-server",
+  "version": "1.0.0",
+  "description": "Node.js Server Utility for Pet Care Appointments using Core Modules (No Express)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test-client.js"
+  },
+  "author": "sukhada bhave (Roll 67)",
+  "license": "ISC"
+}
