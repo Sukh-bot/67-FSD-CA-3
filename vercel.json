@@ -9,7 +9,7 @@
     },
     {
       "source": "/(.*)",
-      "destination": "/Program-5-FullStack-Integration/frontend/dist/index.html"
+      "destination": "/index.html"
     }
   ]
 }
