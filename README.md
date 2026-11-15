@@ -10,6 +10,20 @@
 
 ---
 
+## 🚀 Live Deployments & Project Links
+
+| Target | Platform | URL / Deployment Link | Status |
+|---|---|---|---|
+| **GitHub Repository** | GitHub | [https://github.com/Sukh-bot/67-FSD-CA-3](https://github.com/Sukh-bot/67-FSD-CA-3) | ✅ Active (main) |
+| **Frontend Live Web App** | Vercel | [https://67-fsd-ca-3.vercel.app](https://67-fsd-ca-3.vercel.app) | 🚀 Deployed |
+| **Temporary Preview Deployment** | Vercel Edge | [https://rushing-argon-enhrqo1.tmp.now](https://rushing-argon-enhrqo1.tmp.now) | ⚡ Live |
+| **Claim Deployment to Account** | Vercel | [Claim to Sukh-bot Vercel](https://vercel.com/claim-deployment?code=d09dc595-1982-4cb1-9dfe-2730f7584661) | 🔗 1-Click Link |
+| **Backend REST API Web Service** | Render | [https://petcare-backend-api.onrender.com](https://petcare-backend-api.onrender.com) | ⚙️ Configured (`render.yaml`) |
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FSukh-bot%2F67-FSD-CA-3&root-directory=Program-5-FullStack-Integration%2Ffrontend)
+
+---
+
 ## Repository Structure
 
 ```

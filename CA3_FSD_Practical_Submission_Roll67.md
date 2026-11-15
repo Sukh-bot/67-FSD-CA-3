@@ -13,6 +13,10 @@
 **Submission Title:** Comprehensive Practical Assessment Laboratory Report (Programs 1 to 5)  
 **Total Assigned Programs:** 5  
 **Course Outcomes Covered:** CO1, CO2, CO3, CO4, CO5, CO6  
+**GitHub Repository:** [https://github.com/Sukh-bot/67-FSD-CA-3](https://github.com/Sukh-bot/67-FSD-CA-3)  
+**Vercel Live Frontend Deployment:** [https://67-fsd-ca-3.vercel.app](https://67-fsd-ca-3.vercel.app)  
+**Vercel Temporary Edge Deployment:** [https://rushing-argon-enhrqo1.tmp.now](https://rushing-argon-enhrqo1.tmp.now)  
+**Render Backend API Web Service:** [https://petcare-backend-api.onrender.com](https://petcare-backend-api.onrender.com)  
 
 ---
 
